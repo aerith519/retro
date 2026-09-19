@@ -1,13 +1,13 @@
 * { box-sizing: border-box; }
 
 :root {
-  --bg: #0a0d13;
+  --bg: #0a0a0a;
   --name: #e2d19a;      /* khaki/tan for folder & file names */
   --header: #f2ead2;    /* pale cream for column headers */
-  --dim: #9aa3b0;       /* connector lines / muted text */
+  --dim: #9a9a9a;       /* connector lines / muted text */
   --value: #cbbd8e;     /* date/size values */
-  --row-hover: #12161f;
-  --border: #1c212b;
+  --row-hover: #161616;
+  --border: #242424;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
 }
 .title { font-size: 18px; font-weight: bold; color: var(--header); letter-spacing: 0.5px; }
 button {
-  background: #171c26;
+  background: #191919;
   color: var(--name);
   border: 1px solid var(--border);
   padding: 6px 12px;
@@ -36,7 +36,7 @@ button {
   font-family: inherit;
   font-size: 13px;
 }
-button:hover { background: #1e2430; }
+button:hover { background: #222222; }
 
 .tree { font-size: 14px; line-height: 1.6; overflow-x: auto; }
 
@@ -79,7 +79,7 @@ button:hover { background: #1e2430; }
 }
 .modal.hidden { display: none; }
 .modal-box {
-  background: #12161f;
+  background: #161616;
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 20px;
