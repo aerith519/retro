@@ -1,38 +1,78 @@
 {
   "folders": [
     {
-      "name": "version-1.2",
-      "date": "2026-06-15",
-      "size": "120MB",
-      "folders": [],
-      "files": [
+      "name": "cloud1",
+      "date": "",
+      "size": "430.3KB",
+      "folders": [
         {
-          "name": "installer.exe",
-          "date": "2026-06-15",
-          "size": "80MB",
-          "url": "https://www.udrop.com/example1"
-        },
-        {
-          "name": "checksum.txt",
-          "date": "2026-06-15",
-          "size": "4KB",
-          "url": "https://www.udrop.com/example2"
+          "name": "Python",
+          "date": "",
+          "size": "430.3KB",
+          "folders": [
+            {
+              "name": "cli",
+              "date": "",
+              "size": "2.5KB",
+              "folders": [],
+              "files": [
+                {
+                  "name": "exp 1.py",
+                  "date": "",
+                  "size": "244B",
+                  "url": "https://www.udrop.com/PGSM"
+                },
+                {
+                  "name": "exp 2.py",
+                  "date": "",
+                  "size": "363B",
+                  "url": "https://www.udrop.com/PGSH"
+                },
+                {
+                  "name": "exp 3.py",
+                  "date": "",
+                  "size": "156B",
+                  "url": "https://www.udrop.com/PGSI"
+                },
+                {
+                  "name": "exp 4.py",
+                  "date": "",
+                  "size": "1.2KB",
+                  "url": "https://www.udrop.com/PGSJ"
+                },
+                {
+                  "name": "exp 5.py",
+                  "date": "",
+                  "size": "410B",
+                  "url": "https://www.udrop.com/PGSK"
+                },
+                {
+                  "name": "exp 6.py",
+                  "date": "",
+                  "size": "127B",
+                  "url": "https://www.udrop.com/PGSL"
+                }
+              ]
+            },
+            {
+              "name": "ref",
+              "date": "",
+              "size": "427.8KB",
+              "folders": [],
+              "files": [
+                {
+                  "name": "exercise-2.pdf",
+                  "date": "",
+                  "size": "427.8KB",
+                  "url": "https://www.udrop.com/PHjS"
+                }
+              ]
+            }
+          ],
+          "files": []
         }
-      ]
-    },
-    {
-      "name": "version-1.1",
-      "date": "2026-04-10",
-      "size": "115MB",
-      "folders": [],
-      "files": [
-        {
-          "name": "installer.exe",
-          "date": "2026-04-10",
-          "size": "78MB",
-          "url": "https://www.udrop.com/example3"
-        }
-      ]
+      ],
+      "files": []
     }
   ],
   "files": []
