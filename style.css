@@ -1,7 +1,18 @@
 * { box-sizing: border-box; }
+
+:root {
+  --bg: #0a0d13;
+  --name: #e2d19a;      /* khaki/tan for folder & file names */
+  --header: #f2ead2;    /* pale cream for column headers */
+  --dim: #9aa3b0;       /* connector lines / muted text */
+  --value: #cbbd8e;     /* date/size values */
+  --row-hover: #12161f;
+  --border: #1c212b;
+}
+
 body {
-  background: #0d1117;
-  color: #c9d1d9;
+  background: var(--bg);
+  color: var(--name);
   font-family: "SF Mono", "Consolas", "Menlo", monospace;
   margin: 0;
   padding: 0 16px 40px;
@@ -11,21 +22,21 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 16px 0;
-  border-bottom: 1px solid #21262d;
+  border-bottom: 1px solid var(--border);
   margin-bottom: 8px;
 }
-.title { font-size: 18px; font-weight: bold; color: #58a6ff; }
+.title { font-size: 18px; font-weight: bold; color: var(--header); letter-spacing: 0.5px; }
 button {
-  background: #21262d;
-  color: #c9d1d9;
-  border: 1px solid #30363d;
+  background: #171c26;
+  color: var(--name);
+  border: 1px solid var(--border);
   padding: 6px 12px;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
   font-family: inherit;
   font-size: 13px;
 }
-button:hover { background: #30363d; }
+button:hover { background: #1e2430; }
 
 .tree { font-size: 14px; line-height: 1.6; overflow-x: auto; }
 
@@ -34,27 +45,28 @@ button:hover { background: #30363d; }
   grid-template-columns: 1fr 130px 90px;
   gap: 16px;
   padding: 1px 4px;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 .header-row {
-  color: #8b949e;
+  color: var(--header);
   font-weight: bold;
-  border-bottom: 1px solid #21262d;
+  border-bottom: 1px solid var(--border);
   padding-bottom: 6px;
   margin-bottom: 4px;
 }
-.row:hover { background: #161b22; }
+.row:hover { background: var(--row-hover); }
 .row.folder { cursor: pointer; }
-.row.file { cursor: pointer; color: #8b949e; }
-.row.file:hover { color: #58a6ff; }
+.row.file { cursor: pointer; }
+.row.file .name { color: var(--dim); }
+.row.file:hover .name { color: var(--name); }
 
 .name {
   white-space: pre;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.folder .name { color: #e3b341; }
-.date, .size { text-align: right; color: #6e7681; white-space: nowrap; }
+.folder .name { color: var(--name); }
+.date, .size { text-align: right; color: var(--value); white-space: nowrap; }
 
 .children { display: none; }
 .children.open { display: block; }
@@ -67,23 +79,24 @@ button:hover { background: #30363d; }
 }
 .modal.hidden { display: none; }
 .modal-box {
-  background: #161b22;
-  border: 1px solid #30363d;
+  background: #12161f;
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 20px;
   width: 280px;
 }
+.modal-box p { color: var(--header); }
 .modal-box input {
   width: 100%;
   margin: 8px 0;
   padding: 6px 8px;
-  background: #0d1117;
-  border: 1px solid #30363d;
+  background: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 6px;
-  color: #c9d1d9;
+  color: var(--name);
   font-family: inherit;
 }
 .modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 8px; }
-.error { color: #f85149; font-size: 12px; }
+.error { color: #e07a5f; font-size: 12px; }
 .error.hidden { display: none; }
-#uploadStatus { font-size: 12px; color: #6e7681; min-height: 16px; }
+#uploadStatus { font-size: 12px; color: var(--dim); min-height: 16px; }
