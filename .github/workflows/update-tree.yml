@@ -1,0 +1,33 @@
+name: Update tree.json
+
+on:
+  workflow_dispatch: {}      # lets you (or the Deno backend) trigger it manually
+  schedule:
+    - cron: "0 */6 * * *"    # every 6 hours
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build tree.json
+        env:
+          UDROP_KEY1: ${{ secrets.UDROP_KEY1 }}
+          UDROP_KEY2: ${{ secrets.UDROP_KEY2 }}
+        run: node scripts/build-tree.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name "tree-bot"
+          git config user.email "tree-bot@users.noreply.github.com"
+          git add tree.json
+          git diff --staged --quiet || git commit -m "Update tree.json"
+          git push
