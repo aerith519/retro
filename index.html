@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sync2</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <span class="title">sync2</span>
+    <button id="unlockBtn">Upload</button>
+  </div>
+
+  <div id="tree" class="tree"></div>
+
+  <!-- Password modal -->
+  <div id="passModal" class="modal hidden">
+    <div class="modal-box">
+      <p>Enter master code</p>
+      <input id="passInput" type="password" autocomplete="off">
+      <div class="modal-actions">
+        <button id="passCancel">Cancel</button>
+        <button id="passSubmit">Unlock</button>
+      </div>
+      <p id="passError" class="error hidden">Wrong code.</p>
+    </div>
+  </div>
+
+  <!-- Upload panel -->
+  <div id="uploadModal" class="modal hidden">
+    <div class="modal-box">
+      <p>Upload file</p>
+      <input id="fileInput" type="file">
+      <input id="folderIdInput" type="text" placeholder="folder id (blank = root)">
+      <div class="modal-actions">
+        <button id="uploadCancel">Close</button>
+        <button id="uploadSubmit">Upload</button>
+      </div>
+      <p id="uploadStatus"></p>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
