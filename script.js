@@ -1,14 +1,5 @@
 const treeEl = document.getElementById("tree");
 
-function iconFor(name) {
-  const ext = name.split(".").pop().toLowerCase();
-  if (["zip", "rar", "7z"].includes(ext)) return "🗜️";
-  if (["exe", "msi"].includes(ext)) return "⚙️";
-  if (["txt", "md"].includes(ext)) return "📄";
-  if (["png", "jpg", "jpeg", "gif", "webp"].includes(ext)) return "🖼️";
-  return "📄";
-}
-
 // ancestorFlags: array of booleans, one per ancestor level, true = that
 // ancestor was the LAST item in its own list (so we draw blank space
 // instead of a continuing "│" under it).
@@ -89,7 +80,7 @@ function renderFile(fileData, container, prefix, branch) {
 
   const name = document.createElement("span");
   name.className = "name";
-  name.textContent = prefix + branch + "  " + iconFor(fileData.name) + " " + fileData.name;
+  name.textContent = prefix + "\u2500 " + fileData.name;
   row.appendChild(name);
 
   const date = document.createElement("span");
